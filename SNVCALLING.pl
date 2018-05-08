@@ -134,20 +134,6 @@ while($line=<SAM>){
         }
     }while($x>0 && $y>0);
 
-=pod
-    for($counter=0;$counter<length($temp[9]);$counter++){
-        next if substr($REFSeq,$temp[3]-1+$counter,1) eq substr($temp[9],$counter,1);
-
-        #for pileup, calculating covering reads. no such needs for vcf, so deleted       
-        if($SNV{$temp[3]+$counter}){
-            
-        }else{
-            for($subcounter=0;$subcounter<$InfoColNum;$subcounter++){
-                ${@{$SNV{$temp[3]+$counter}}}[$subcounter] = "0";
-            }
-        }
-    }
-=cut
 }
 
 for my $key (keys %SNV){
